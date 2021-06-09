@@ -1,0 +1,7 @@
+.continuous-slider-section{
+    background-color: $brown;
+    padding: 4% 0;
+    @media screen and (max-width: $tablet){
+        padding: 4rem 0;
+    }
+}

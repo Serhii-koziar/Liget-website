@@ -1,0 +1,41 @@
+html {
+  font-size: 62.5%;
+  font-family: $primary-font;
+  color: $black;
+}
+
+
+h1, .h1{
+  @include adaptiveProperty('font-size',50,30);
+  @include adaptiveProperty('line-height',60,40);
+  font-weight: 600;
+  letter-spacing: -.025rem;
+}
+h2, .h2{
+  @include adaptiveProperty('font-size',40,28);
+  @include adaptiveProperty('line-height',48,32);
+  font-weight: 700;
+  letter-spacing: -.08rem;
+  color: rgba($black, .8);
+  span{
+    color: $brown;
+  }
+}
+h3, .h3{
+  @include adaptiveProperty('font-size',28,24);
+  @include adaptiveProperty('line-height',36,32);
+}
+h4, .h4,
+h5, .h5,
+h6, .h6{
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+}
+
+
+.p, p{
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  font-weight: 500;
+  color: rgba($black, .8);
+}

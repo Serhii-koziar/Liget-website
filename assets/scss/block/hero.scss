@@ -1,0 +1,128 @@
+.hero {
+    min-height: 100vh;
+    padding: 7% 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    @media screen and (max-width: $tablet) {
+        padding: 7.2rem 0;
+    }
+
+    h1 {
+        color: $grey;
+
+        span {
+            text-transform: uppercase;
+            @include adaptiveProperty('font-size', 30, 24);
+            line-height: 1.3;
+        }
+    }
+
+    // .hero__scroll
+    &__scroll {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 3.6rem;
+        height: 2.2rem;
+        width: 4rem;
+        @media screen and (max-width: $tablet) {
+            bottom: 2.8rem;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    // .hero__bg
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgb(0, 0, 0);
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.16) 5%, rgba(0, 0, 0, 0) 53%, rgba(0, 0, 0, 0.16) 92%);
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    // .hero__content
+    &__content {
+        max-width: 58.5rem;
+        width: 100%;
+        margin-left: auto;
+        position: relative;
+        padding: 0 0 2.8rem 0;
+        box-sizing: border-box;
+        @media screen and (max-width: $tabletSmall) {
+            max-width: none;
+        }
+
+        &:after {
+            content: '';
+            left: 0;
+            bottom: 0;
+            width: 100vw;
+            height: .36rem;
+            background-color: $brown;
+            position: absolute;
+        }
+    }
+
+    // .hero__logo
+    &__logo {
+        max-width: 43rem;
+        width: 100%;
+        margin-left: auto;
+        transform: translateY(10%);
+        @media screen and (max-width: $tablet) {
+            max-width: 36rem;
+        }
+        @media screen and (max-width: $tabletSmall) {
+            max-width: 32rem;
+        }
+        @media screen and (max-width: $mobile) {
+            max-width: 24rem;
+            transform: translateY(0%);
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+
+        }
+    }
+
+    // .hero--small
+    &--small {
+        min-height: 71.8rem;
+        box-sizing: border-box;
+        border-bottom: 4px solid $brown;
+        @media screen and (max-width: $tabletSmall) {
+            min-height: 50rem;
+        }
+        @media screen and (max-width: $mobile) {
+            min-height: 36rem;
+        }
+    }
+}

@@ -1,0 +1,197 @@
+.header{
+    background-color: rgba($black, .7);
+    padding: .6rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    transition: all .3s ease;
+    @media screen and (max-width: $tablet){
+        padding: .4rem 0;
+    }
+    nav{
+        @media screen and (max-width: $tablet){
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            overflow-y: auto;
+            width: 50%;
+            padding: 6rem 3rem;
+            box-sizing: border-box;
+            background-color: $white;
+            transform: translateX(-100%);
+            transition: all .3s ease;
+        }
+        @media screen and (max-width: $tabletSmall){
+            width: 70%;
+        }
+        @media screen and (max-width: $mobile){
+            width: 100%;
+        }
+        ul{
+            display: flex;
+            align-items: center;
+            @media screen and (max-width: $tablet){
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+        li{
+            margin-right: 2.6rem;
+            @media screen and (max-width: $tablet){
+                margin-bottom: 2.8rem;
+            }
+            &:last-of-type{
+                margin-right: 0;
+            }
+            a{
+                @extend .p;
+                padding: 1rem;
+                color: $white;
+                border: 1px solid transparent;
+                border-radius: 10px ;
+                transition: all .3s ease;
+                @media screen and (max-width: $tablet){
+                    font-size: 2.5rem;
+                    line-height: 1.3;
+                    color: rgba($black, .8);
+                    font-weight: 700;
+                }
+                @media screen and (max-width: $mobile){
+                    font-size: 2rem;
+                }
+                &:hover{
+                    border: 1px solid $brown;
+                    transition: all .3s ease;
+                }
+            }
+        }
+    }
+    .btn{
+        margin-left: 3.6rem ;
+    }
+    // .header__logo
+    &__logo{
+        max-width: 15.6rem;
+        width: 100%;
+        display: block;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        @media screen and (max-width: $tablet){
+            max-width: 12rem;
+        }
+    }
+    // .header__burger
+    &__burger{
+        cursor: pointer;
+        position: relative;
+        width: 3.2rem;
+        display: none;
+        height: 2.4rem;
+        &:after{
+            bottom: 0;
+        }
+        &:before {
+            top: 0;
+        }
+        &:after,
+        &:before {
+            content: '';
+        }
+        span{
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        &:after,
+        &:before,
+        span{
+            background-color: $white;
+            height: .24rem;
+            width: 100%;
+            left: 0;
+            position: absolute;
+        }
+        @media screen and (max-width: $tablet){
+            display: block;
+        }
+    }
+    // .header__cross
+    &__cross{
+        cursor: pointer;
+        width: 3.6rem;
+        height: 3.6rem;
+        position: absolute;
+        display: none;
+        right: 3rem;
+        top: 3rem;
+        @media screen and (max-width: $tablet){
+            display: block;
+        }
+        @media screen and (max-width: $mobile){
+            right: 1.6rem;
+            top: 1.6rem;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    // .header__wrapper
+    &__wrapper{
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
+    }
+
+    // .header__inner
+    &__inner{
+        display: flex;
+        align-items: center;
+        @media screen and (max-width: $tablet){
+
+        }
+    }
+    // .header__fader
+    &__fader{
+        @media screen and (max-width: $tablet) {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($black, .7);
+            opacity: 0;
+            visibility: hidden;
+            transition: all .3s ease;
+        }
+    }
+    // .header--open-menu
+    &--open-menu{
+        .header__fader{
+            @media screen and (max-width: $tablet) {
+                opacity: 1;
+                visibility: visible;
+                transition: all .3s ease;
+                z-index: 200;
+            }
+        }
+        nav{
+            @media screen and (max-width: $tablet) {
+                transform: translateX(0);
+                transition: all .3s ease;
+                z-index: 300;
+            }
+        }
+    }
+    // .header--min
+    &--min{
+        background-color: $black;
+        transition: all .3s ease;
+    }
+}

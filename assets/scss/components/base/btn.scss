@@ -1,0 +1,41 @@
+.btn {
+    cursor: pointer;
+    outline: none;
+    border: .6px solid $brown;
+    box-sizing: border-box;
+    border-radius: 10px;
+    @extend .p;
+    font-weight: 500;
+    width: fit-content;
+    padding: .4rem 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 3.2rem;
+    white-space: nowrap;
+    color: $white;
+    transition: all .3s ease;
+    &:hover{
+        background-color: $brown;
+        color: $white;
+        transition: all .3s ease;
+    }
+    // .btn--grey-font
+    &--grey-font{
+        color: $grey;
+    }
+    // .btn--brown
+    &--brown{
+        background-color: $brown;
+    }
+    // .btn--black-font
+    &--black-font{
+        color: rgba($black, .8);
+    }
+    // .btn--white
+    &--white{
+        border-color: $white;
+        color: rgba($white, .8);
+    }
+}

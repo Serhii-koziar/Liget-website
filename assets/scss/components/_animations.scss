@@ -1,0 +1,51 @@
+@keyframes fade-in-up {
+    0% {
+        transform: translate3d(0, 40px, 0)
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation-duration: 1.2s;
+    animation-fill-mode: both;
+
+    &.animation-active {
+        animation-name: fade-in-up;
+    }
+}
+
+@keyframes zoom-in-bounce {
+    0% {
+        transform: scale(0) rotate(0);
+    }
+
+    50% {
+        transform: scale(1.4) rotate(20deg);
+    }
+
+    75% {
+        transform: scale(0.8) rotate(0deg);
+    }
+
+    90% {
+        transform: scale(1.15) rotate(10deg);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.zoom-in-bounce {
+    transform: scale(0);
+    animation-duration: 0.8s;
+    animation-fill-mode: both;
+    &.animation-active {
+        animation-name: zoom-in-bounce;
+    }
+}

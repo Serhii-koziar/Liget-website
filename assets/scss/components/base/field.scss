@@ -1,0 +1,21 @@
+.field {
+    input,
+    textarea{
+        outline: none;
+        width: 100%;
+        @extend .p;
+        border: none;
+        color: rgba($white, .8);
+        background-color: transparent;
+        border-bottom: .4px solid $grey;
+        padding: 0 0 .8rem 0;
+        height: 3.1rem;
+        box-sizing: border-box;
+        resize: none;
+        &::placeholder{
+            letter-spacing: .08rem;
+            text-transform: uppercase;
+            color: $brown;
+        }
+    }
+}

@@ -1,0 +1,48 @@
+.error-section{
+    min-height: 100vh;
+    padding: 6.4rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $brown;
+    box-sizing: border-box;
+    h1{
+        font-size: 25rem;
+        line-height: 1.3;
+        color: $white;
+        text-align: center;
+        @media screen and (max-width: $mobile){
+            font-size: 18rem;
+        }
+    }
+    h2{
+        text-align: center;
+        font-size: 4rem;
+        line-height: 1.3;
+        color: #E7EAEC;
+        margin-bottom: 6.8rem;
+        @media screen and (max-width: $mobile){
+            font-size: 3.2rem;
+        }
+    }
+    // .error-section__btns
+    &__btns{
+        display: flex;
+        align-items: center;
+        .btn{
+            margin-right: 1.8rem;
+            &:last-of-type{
+                margin-right: 0;
+            }
+        }
+    }
+    // .error-section__content
+    &__content{
+        margin: 0 auto;
+        max-width: 55.8rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}

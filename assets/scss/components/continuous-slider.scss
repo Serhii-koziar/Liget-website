@@ -1,0 +1,8 @@
+.continuous-slider{
+    // .continuous-slider__wrapper
+    &__wrapper{
+        &.swiper-wrapper {
+            transition-timing-function: linear;
+        }
+    }
+}
