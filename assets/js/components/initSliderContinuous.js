@@ -8,13 +8,19 @@ export function initSliderContinuous() {
       slidesPerView: 'auto',
       spaceBetween: 100,
       loop: true,
-      speed: 10000,
+      speed: 4000,
       autoplay: {
         delay: 0,
-        autoplayDisableOnInteraction: false,
+        autoplayDisableOnInteraction: true,
+        pauseOnMouseEnter: true,
       },
-
-
+      on: {
+        init() {
+          this.el.addEventListener('mouseleave', () => {
+            this.autoplay.start();
+          });
+        }
+      },
     });
   }
 }
